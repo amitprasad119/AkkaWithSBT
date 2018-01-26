@@ -1,3 +1,8 @@
+/*
+  In this piece of code trying to get acknowlegment from reciever i.e MessageMonitor
+  Setting 10 seconds to set the wait time
+  If it does not return any message exception will be thrown for timeout
+ */
 import akka.actor.{Actor, ActorSystem, Props}
 import akka.util.Timeout
 import scala.concurrent.duration._

@@ -1,4 +1,11 @@
+/*
+* This is example of forward message between two actors
+* Here MainMonitor is a parent actor which accepts the message.
+* LastRecieverMessage is the last actor to recieve this message.
+*
+* */
 import akka.actor.{Actor, ActorSystem, Props}
+
 class MainMonitor extends Actor{
   override def receive: Receive = {
     case message :String => println("Message Came into MainMonitor:::"+ message + ":::"+ self.path.name)
